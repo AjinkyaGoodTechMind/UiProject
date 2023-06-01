@@ -30,7 +30,11 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
 
 const sessionRoutes = require("./routes/sessionRoutes");
 
+const atcRoutes = require("./routes/atcRoutes");
+
 app.use("/api/session", sessionRoutes);
+
+app.use("/api/data", atcRoutes);
 
 app.use("/public", express.static(path.join(__dirname, "public")));
 
